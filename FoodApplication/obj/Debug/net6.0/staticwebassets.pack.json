@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\FoodApplication.bundle.scp.css"
     },
     {
+      "Id": "D:\\SGL\\Csharp\\FoodApplication\\FoodApplication\\wwwroot\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.min.css"
+    },
+    {
       "Id": "D:\\SGL\\Csharp\\FoodApplication\\FoodApplication\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -23,6 +27,10 @@
     {
       "Id": "D:\\SGL\\Csharp\\FoodApplication\\FoodApplication\\wwwroot\\images\\carouselImages\\Food3.webp",
       "PackagePath": "staticwebassets\\images\\carouselImages\\Food3.webp"
+    },
+    {
+      "Id": "D:\\SGL\\Csharp\\FoodApplication\\FoodApplication\\wwwroot\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.min.js"
     },
     {
       "Id": "D:\\SGL\\Csharp\\FoodApplication\\FoodApplication\\wwwroot\\js\\site.js",

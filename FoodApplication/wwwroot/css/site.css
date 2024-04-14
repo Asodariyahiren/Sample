@@ -38,7 +38,7 @@ header {
 }
 
 .dishCard {
-    height: 250px;
+    height: 270px;
 }
 
 .fa-instagram {
@@ -61,15 +61,15 @@ header {
     top: 5rem;
 }
 
-    #recipe-list::-webkit-scrollbar {
+    #recipe-list ul::-webkit-scrollbar {
         width: 10px;
     }
 
-    #recipe-list::-webkit-scrollbar-track {
+    #recipe-list ul::-webkit-scrollbar-track {
         background-color: #ffffff;
     }
 
-    #recipe-list::-webkit-scrollbar-thumb {
+    #recipe-list ul::-webkit-scrollbar-thumb {
         background-color: #ff1448;
         border-radius: 10px;
     }
@@ -82,3 +82,7 @@ header {
     .recipe-item:hover a {
         color: #ffffff !important;
     }
+
+#order-img {
+    height: 230px;
+}
