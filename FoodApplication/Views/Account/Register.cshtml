@@ -1,0 +1,43 @@
+﻿@model FoodApplication.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+<div class="container">
+    <div class="row shadow rounded">
+        <div class="col-md-6 col-sm-6 col-xl-6 col-lg-6">
+            <div class="mt-5">
+                <img src="~/images/GujratiTHalu.webp" class="w-100 h-100" alt="Thali" />
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xl-6 col-lg-6">
+            <form autocomplete="off" method="post" class="m-2 p-2" asp-controller="Account" asp-action="Register">
+                <div class="mb-3">
+                    <h2 class="text-pink fst-italic">Register</h2>
+                    <span class="fst-italic text-muted">Create your account</span>
+                </div>
+                <div class="mb-3 text-danger">
+                    @Html.ValidationSummary()
+                </div>
+                <div class="form-floating mb-3">
+                    @Html.TextBoxFor(m=>m.Name, new{@class="form-control",placeholder="Name"})
+                    <label for="Name">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    @Html.TextAreaFor(m=>m.Adress, new{@class="form-control",placeholder="Adress"})
+                    <label for="Adress">Adress</label>
+                </div>
+                <div class="form-floating mb-3">
+                    @Html.TextBoxFor(m=>m.Email, new{@class="form-control",placeholder="Email"})
+                    <label for="Email">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                    @Html.TextBoxFor(m=>m.Password,new{@class="form-control",placeholder="Password",type="password"})
+                    <label for="Password">Password</label>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-sm btn-dark w-100 p-2 shadow rounded" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

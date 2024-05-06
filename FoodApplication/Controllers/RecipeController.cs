@@ -29,7 +29,9 @@ namespace FoodApplication.Controllers
         [HttpPost]
         public IActionResult ShowOrder(OrderRecipeDetails details)
         {
-            return PartialView("_ShowOrder",details);
+            Random random = new Random();
+            ViewBag.Price =   Math.Round(random.Next(150, 500)/5.0)*5;
+            return PartialView("_ShowOrder", details);
         }
     }
 }

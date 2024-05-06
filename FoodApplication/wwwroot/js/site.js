@@ -5,7 +5,7 @@ let apiKey = "568414a2-7b45-48bb-ba5b-cdc5b22f3f6c";
 async function GetRecipes(recipeName, id, isAllshow) {
     let resp = await fetch(`${apiURl}?search=${recipeName}&key=${apiKey}`);
     let result = await resp.json();
-    let showRes = isAllshow ? result.data.recipes : result.data.recipes.slice(4, 10);
+    let showRes = isAllshow ? result.data.recipes : result.data.recipes.slice(1, 7);
     showRecipes(showRes, id);
 }
 

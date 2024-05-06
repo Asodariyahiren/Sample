@@ -17,6 +17,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\SGL\\Csharp\\FoodApplication\\FoodApplication\\wwwroot\\images\\FrenchFries.avif",
+      "PackagePath": "staticwebassets\\images\\FrenchFries.avif"
+    },
+    {
+      "Id": "D:\\SGL\\Csharp\\FoodApplication\\FoodApplication\\wwwroot\\images\\FrenchFries.jpeg",
+      "PackagePath": "staticwebassets\\images\\FrenchFries.jpeg"
+    },
+    {
+      "Id": "D:\\SGL\\Csharp\\FoodApplication\\FoodApplication\\wwwroot\\images\\GujratiTHalu.webp",
+      "PackagePath": "staticwebassets\\images\\GujratiTHalu.webp"
+    },
+    {
       "Id": "D:\\SGL\\Csharp\\FoodApplication\\FoodApplication\\wwwroot\\images\\carouselImages\\Food1.jpeg",
       "PackagePath": "staticwebassets\\images\\carouselImages\\Food1.jpeg"
     },

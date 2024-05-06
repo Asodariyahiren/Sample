@@ -86,3 +86,17 @@ header {
 #order-img {
     height: 230px;
 }
+
+#qty {
+    width: 50px;
+    border: none;
+}
+
+    #qty:focus {
+        outline: none;
+    }
+.qty-selection{
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
