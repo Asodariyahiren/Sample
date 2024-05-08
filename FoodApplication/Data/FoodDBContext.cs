@@ -15,5 +15,6 @@ namespace FoodApplication.Data
         {
             base.OnModelCreating(builder);
         }
+        public DbSet<Order> Orders { get; set; }
     }
 }

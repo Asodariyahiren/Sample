@@ -31,16 +31,23 @@
                             <a class="nav-link text-pink fw-bold" asp-area="" asp-controller="" asp-action="">Menu</a>
                         </li>
                     </ul>
-                    @if (!User.Identity.IsAuthenticated)
+                    @if (User.Identity!.IsAuthenticated)
                     {
-                        <div>
-                            <a class="nav-link fw-bold text-pink" asp-controller="Account" asp-action="Login">Log In</a>
+                        <div class="d-flex">
+                            <div class="mt-2">
+                                <span><i class="fa-solid fa-cart-shopping fs-5 text-pink"></i></span>
+                            </div>
+                            <div>
+                                <a class="nav-link fw-bold text-pink" asp-controller="Account"
+                                   asp-action="LogOut">Log Out</a>
+                            </div>
                         </div>
                     }
                     else
                     {
                         <div>
-                            <a class="nav-link fw-bold text-pink" asp-controller="Account" asp-action="LogOut">Log Out</a>
+                            <a class="nav-link fw-bold text-pink" asp-controller="Account"
+                               asp-action="Login">Log In</a>
                         </div>
                     }
                 </div>

@@ -9,9 +9,10 @@
                 <div class="card-body">
                     <p class="card-title fw-bold fs-6 text-dark">@recipe.Title</p>
                     <span class="card-text">@recipe.Publisher</span>
-                    <div>
-                        <a href="/Recipe/Order?id=@recipe.Id" class="btn btn-sm btn-primary p-2">Order</a>
-
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <a href="/Recipe/Order?id=@recipe.Id" 
+                        class="btn btn-sm text-black text-white shadow rounded p-2">Order</a>
+                        <span class="addToCartIcon"><i class="fa-regular fa-heart fs-3"></i></span>
                     </div>
                 </div>
             </div>

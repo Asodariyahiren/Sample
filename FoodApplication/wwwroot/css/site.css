@@ -95,8 +95,30 @@ header {
     #qty:focus {
         outline: none;
     }
-.qty-selection{
-    -webkit-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
+
+.qty-selection {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.fa-plus, .fa-minus {
+    cursor: pointer;
+}
+
+#totalAmount, #price {
+    width: 60px;
+    border: none;
+}
+
+    #totalAmount:focus, #price:focus {
+        outline: none;
+    }
+
+.addToCartIcon {
+    cursor: pointer;
+}
+
+.text-black {
+    background-color: #0d243d;
 }

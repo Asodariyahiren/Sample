@@ -1,10 +1,20 @@
-﻿using FoodApplication.Models;
+﻿using FoodApplication.Data;
+using FoodApplication.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FoodApplication.Controllers
 {
     public class RecipeController : Controller
     {
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly FoodDBContext _context;
+        public RecipeController(UserManager<ApplicationUser> userManager, FoodDBContext context)
+        {
+            _userManager = userManager;
+            _context = context;
+        }
         public IActionResult Index()
         {
             return View();
@@ -27,11 +37,27 @@ namespace FoodApplication.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult ShowOrder(OrderRecipeDetails details)
+        public async Task<IActionResult> ShowOrder(OrderRecipeDetails details)
         {
             Random random = new Random();
-            ViewBag.Price =   Math.Round(random.Next(150, 500)/5.0)*5;
+            ViewBag.Price = Math.Round(random.Next(150, 500) / 5.0) * 5;
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            ViewBag.UserId = user?.Id;
+            ViewBag.Address = user?.Address;
             return PartialView("_ShowOrder", details);
+        }
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Order([FromForm] Order order)
+        {
+            if (ModelState.IsValid)
+            {
+                order.OrderDate = DateTime.Now;
+                await _context.Orders.AddAsync(order);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index", "Recipe");
+            }
+            return RedirectToAction("Order", "Recipe", new { id = order.Id });
         }
     }
 }
