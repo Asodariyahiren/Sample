@@ -1,6 +1,6 @@
 ﻿
 let apiURl = "https://forkify-api.herokuapp.com/api/v2/recipes";
-let apiKey = "568414a2-7b45-48bb-ba5b-cdc5b22f3f6c";
+let apiKey = "8ccf21b3-ec84-4578-92eb-ba1a7d0676f3";
 
 async function GetRecipes(recipeName, id, isAllshow) {
     let resp = await fetch(`${apiURl}?search=${recipeName}&key=${apiKey}`);
@@ -55,4 +55,35 @@ function quantity(option) {
     totalAmount = price * qty;
     $('#qty').val(qty);
     $('#totalAmount').val(totalAmount);
+}
+//Add Cart
+
+async function cart() {
+    let iTag = $(this).children('i')[0];
+    let recipeId = $(this).attr("data-recipeId");
+    if ($(iTag).hasClass('fa-regular')) {
+        let resp = await fetch(`${apiURl}/${recipeId}?key=${apiKey}`);
+        let result = await resp.json();
+        debugger;
+        let cart = result.data.recipe;
+        cart.RecipeId = recipeId;
+        delete cart.id;
+        cardRequest(cart, "SaveCart");
+    } else {
+
+    }
+}
+
+function cardRequest(data, action) {
+    $.ajax({
+        url:'/Cart/' + action,
+        type: 'POST',
+        data: data,
+        success: function (resp) {
+            console.log(resp);
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
 }

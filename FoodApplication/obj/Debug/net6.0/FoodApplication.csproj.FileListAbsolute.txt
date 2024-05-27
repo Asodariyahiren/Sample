@@ -1,3 +1,11 @@
+D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.csproj.AssemblyReference.cache
+D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.GeneratedMSBuildEditorConfig.editorconfig
+D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.AssemblyInfoInputs.cache
+D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.AssemblyInfo.cs
+D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.csproj.CoreCompileInputs.cache
+D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.MvcApplicationPartsAssemblyInfo.cache
+D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.RazorAssemblyInfo.cache
+D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.RazorAssemblyInfo.cs
 D:\SGL\Csharp\FoodApplication\FoodApplication\bin\Debug\net6.0\appsettings.Development.json
 D:\SGL\Csharp\FoodApplication\FoodApplication\bin\Debug\net6.0\appsettings.json
 D:\SGL\Csharp\FoodApplication\FoodApplication\bin\Debug\net6.0\FoodApplication.staticwebassets.runtime.json
@@ -228,14 +236,6 @@ D:\SGL\Csharp\FoodApplication\FoodApplication\bin\Debug\net6.0\runtimes\win\lib\
 D:\SGL\Csharp\FoodApplication\FoodApplication\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\SGL\Csharp\FoodApplication\FoodApplication\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\SGL\Csharp\FoodApplication\FoodApplication\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.csproj.AssemblyReference.cache
-D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.GeneratedMSBuildEditorConfig.editorconfig
-D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.AssemblyInfoInputs.cache
-D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.AssemblyInfo.cs
-D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.csproj.CoreCompileInputs.cache
-D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.MvcApplicationPartsAssemblyInfo.cache
-D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.RazorAssemblyInfo.cache
-D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\FoodApplication.RazorAssemblyInfo.cs
 D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\staticwebassets\msbuild.FoodApplication.Microsoft.AspNetCore.StaticWebAssets.props
 D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\staticwebassets\msbuild.build.FoodApplication.props
 D:\SGL\Csharp\FoodApplication\FoodApplication\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.FoodApplication.props
