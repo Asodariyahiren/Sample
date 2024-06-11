@@ -7,6 +7,7 @@ async function GetRecipes(recipeName, id, isAllshow) {
     let result = await resp.json();
     let showRes = isAllshow ? result.data.recipes : result.data.recipes.slice(1, 7);
     showRecipes(showRes, id);
+
 }
 
 function showRecipes(recipes, id) {
@@ -18,7 +19,7 @@ function showRecipes(recipes, id) {
         data: JSON.stringify(recipes),
         success: function (htmlResult) {
             $("#" + id).html(htmlResult);
-
+            getAddedCarts();
         }
     })
 }
@@ -58,29 +59,78 @@ function quantity(option) {
 }
 //Add Cart
 
+
 async function cart() {
     let iTag = $(this).children('i')[0];
     let recipeId = $(this).attr("data-recipeId");
     if ($(iTag).hasClass('fa-regular')) {
+
         let resp = await fetch(`${apiURl}/${recipeId}?key=${apiKey}`);
         let result = await resp.json();
-        debugger;
-        let cart = result.data.recipe;
-        cart.RecipeId = recipeId;
-        delete cart.id;
-        cardRequest(cart, "SaveCart");
-    } else {
 
+        if (result.data && result.data.recipe) {
+            let cart = result.data.recipe;
+            cart.RecipeId = recipeId;
+            delete cart.id;
+            cardRequest(cart, "SaveCart", "fa-solid", "fa-regular", iTag);
+        } else {
+
+        }
+    }
+    else
+    {
+        let data = { Id: recipeId };
+        cardRequest(data, "RemoveCartFromList", "fa-regular", "fa-solid", iTag);
     }
 }
 
-function cardRequest(data, action) {
+function cardRequest(data, action, addcls, removecls, iTag) {
     $.ajax({
-        url:'/Cart/' + action,
+        url: '/Cart/' + action,
         type: 'POST',
         data: data,
         success: function (resp) {
-            console.log(resp);
+            $(iTag).addClass(addcls);
+            $(iTag).removeClass(removecls);
+
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+}
+
+function getAddedCarts() {
+    $.ajax({
+        url: '/Cart/GetAddedCarts',
+        type: 'GET',
+        dataType: 'json',
+        success: function (result) {
+            $(".addToCartIcon").each((index, spanTag) => {
+                let recipeId = $(spanTag).attr("data-recipeId");
+                for (var i = 0; i < result.length; i++) {
+                    if (recipeId == result[i]) {
+                        let itag = $(spanTag).children('i')[0];
+                        $(itag).addClass('fa-solid');
+                        $(itag).removeClass('fa-regular');
+                        break;
+                    }
+                }
+            })
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+}
+
+function getCartList() {
+    $.ajax({
+        url: '/Cart/GetCartList',
+        type: 'GET',
+        dataType: 'html',
+        success: function (result) {
+            $('#showCartList').html(result);
         },
         error: function (err) {
             console.log(err);

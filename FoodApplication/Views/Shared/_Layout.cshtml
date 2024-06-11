@@ -33,9 +33,12 @@
                     </ul>
                     @if (User.Identity!.IsAuthenticated)
                     {
-                        <div class="d-flex">
-                            <div class="mt-2">
-                                <span><i class="fa-solid fa-cart-shopping fs-5 text-pink"></i></span>
+                        <div class="d-flex justify-content-center align-content-center">
+                            <div class="text-center">
+                                <span class="p-4" id="cartListIcon"><i class="fa-solid fa-cart-shopping fs-4 text-pink"></i></span>
+                                <div id="showCartList" 
+                                    class="position-absolute shadow rounded p-2 bg-white">
+                                </div>
                             </div>
                             <div>
                                 <a class="nav-link fw-bold text-pink" asp-controller="Account"
@@ -100,6 +103,15 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/jquery-ui.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @if (User.Identity!.IsAuthenticated)
+    {
+        <script type="text/javascript">
+            $(document).ready(function () {
+                getAddedCarts();
+                getCartList();
+            });
+        </script>
+    }
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
